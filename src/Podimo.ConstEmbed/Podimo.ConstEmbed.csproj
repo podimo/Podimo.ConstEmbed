@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <IsPackable>true</IsPackable>
+        <!-- This error seems not to indicate a real problem. -->
+        <NoWarn>NU5128</NoWarn>
+        <!-- Do not provide a library, only analyzer.-->
+        <IncludeBuildOutput>false</IncludeBuildOutput>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <PackageId>Podimo.ConstEmbed</PackageId>
+        <PackageTags>Source Generators;Source Generator;Incremental;Embedding;Constants;Constant;Const</PackageTags>
+        <Version>1.0.0</Version>
+        <Authors>Podimo</Authors>
+        <Company>Podimo</Company>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/podimo/Podimo.ConstEmbed</RepositoryUrl>
+        <Title>Podimo.ConstEmbed - Compile-time file embedding as string constants.</Title>
+        <Description>
+            A source generator that turns additional files into file constants in a generated namespace.
+            This is an alternative approach to embedding files in C# source manually,
+            or loading them manually as embedded resources via reflection.
+
+            With ConstEmbed, you will never have to see a runtime error because you mistyped the name,
+            as the constants are evaluated at compile-time.
+        </Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- Package the generator in the analyzer directory of the nuget package -->
+        <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false"/>
+
+        <!-- Package the props and target files. The files need to match the name of the project. -->
+        <!-- See https://github.com/NuGet/Home/issues/9055 -->
+        <None Include="build/*" Pack="true" PackagePath="build/"/>
+
+        <!-- Enable release tracking for diagnostics. -->
+        <AdditionalFiles Include="AnalyzerReleases.Unshipped.md"/>
+        <AdditionalFiles Include="AnalyzerReleases.Shipped.md"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="4.2.0"/>
+    </ItemGroup>
+
+</Project>

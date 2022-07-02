@@ -1,0 +1,12 @@
+<Project>
+
+    <PropertyGroup>
+        <LangVersion>10</LangVersion>
+        <Nullable>enable</Nullable>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <!-- [CS8785]: Make sure we notice if the source generator encounters an exception during code generation. -->
+        <MSBuildWarningsAsErrors>CS8785</MSBuildWarningsAsErrors>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+</Project>

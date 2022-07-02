@@ -1,0 +1,69 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30323.103
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6C1DD0C1-2B34-4711-A19B-0D13F5CB369D}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Justfile = Justfile
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1FA07F37-FAFC-4A11-B0D7-FBEC5117B1E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Podimo.ConstEmbed", "src\Podimo.ConstEmbed\Podimo.ConstEmbed.csproj", "{0D5EB089-BF2E-4168-B6FC-6F206E54C42F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E161277B-6B8D-4B2A-A83D-46CEBDE4EAC8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Podimo.ConstEmbedTests", "tests\Podimo.ConstEmbedTests\Podimo.ConstEmbedTests.csproj", "{5C5F32E7-D33A-420F-98BE-E269E75748B4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{F529D587-9BB8-4974-ABC1-0AD347F2CFAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Podimo.ExampleConsoleApp", "examples\Podimo.ExampleConsoleApp\Podimo.ExampleConsoleApp.csproj", "{53E30252-5907-4AA5-8C0F-D98D5DBC07BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Podimo.ExampleCodeGeneration", "examples\Podimo.ExampleCodeGeneration\Podimo.ExampleCodeGeneration.csproj", "{490EAEC0-CBD0-4BED-BCBB-D6B566FA7970}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Podimo.ConstEmbedTestHelpers", "tests\Podimo.ConstEmbedTestHelpers\Podimo.ConstEmbedTestHelpers.csproj", "{A842477D-29BF-412F-BCA2-660EA7E54E82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0D5EB089-BF2E-4168-B6FC-6F206E54C42F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D5EB089-BF2E-4168-B6FC-6F206E54C42F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D5EB089-BF2E-4168-B6FC-6F206E54C42F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D5EB089-BF2E-4168-B6FC-6F206E54C42F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C5F32E7-D33A-420F-98BE-E269E75748B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C5F32E7-D33A-420F-98BE-E269E75748B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C5F32E7-D33A-420F-98BE-E269E75748B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C5F32E7-D33A-420F-98BE-E269E75748B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53E30252-5907-4AA5-8C0F-D98D5DBC07BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53E30252-5907-4AA5-8C0F-D98D5DBC07BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53E30252-5907-4AA5-8C0F-D98D5DBC07BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53E30252-5907-4AA5-8C0F-D98D5DBC07BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{490EAEC0-CBD0-4BED-BCBB-D6B566FA7970}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{490EAEC0-CBD0-4BED-BCBB-D6B566FA7970}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{490EAEC0-CBD0-4BED-BCBB-D6B566FA7970}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{490EAEC0-CBD0-4BED-BCBB-D6B566FA7970}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A842477D-29BF-412F-BCA2-660EA7E54E82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A842477D-29BF-412F-BCA2-660EA7E54E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A842477D-29BF-412F-BCA2-660EA7E54E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A842477D-29BF-412F-BCA2-660EA7E54E82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E72B357-9E1E-43B5-9868-8D2B74CB2AF0}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0D5EB089-BF2E-4168-B6FC-6F206E54C42F} = {1FA07F37-FAFC-4A11-B0D7-FBEC5117B1E5}
+		{5C5F32E7-D33A-420F-98BE-E269E75748B4} = {E161277B-6B8D-4B2A-A83D-46CEBDE4EAC8}
+		{53E30252-5907-4AA5-8C0F-D98D5DBC07BA} = {F529D587-9BB8-4974-ABC1-0AD347F2CFAD}
+		{490EAEC0-CBD0-4BED-BCBB-D6B566FA7970} = {F529D587-9BB8-4974-ABC1-0AD347F2CFAD}
+		{A842477D-29BF-412F-BCA2-660EA7E54E82} = {E161277B-6B8D-4B2A-A83D-46CEBDE4EAC8}
+	EndGlobalSection
+EndGlobal

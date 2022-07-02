@@ -1,0 +1,7 @@
+<Project>
+    <ItemGroup>
+        <CompilerVisibleProperty Include="ConstEmbedNamespace"/>
+        <CompilerVisibleProperty Include="ConstEmbedVisibility"/>
+        <CompilerVisibleItemMetadata Include="AdditionalFiles" MetadataName="ConstEmbed"/>
+    </ItemGroup>
+</Project>
