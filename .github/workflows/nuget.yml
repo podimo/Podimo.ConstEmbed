@@ -5,12 +5,15 @@ on:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
     timeout-minutes: 15
     
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: 6.0.x
       - run: |
           git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
           git branch --remote --contains | grep origin/main
@@ -18,6 +21,6 @@ jobs:
       - run: dotnet build --configuration Release /p:Version=${VERSION}
       - run: dotnet test --configuration Release /p:Version=${VERSION} --no-build
       - run: dotnet pack --configuration Release /p:Version=${VERSION} --no-build --output .
-      - run: dotnet nuget push NuGet.Workflow.${VERSION}.nupkg --source https://nuget.pkg.github.com/podimo/index.json --api-key ${GITHUB_TOKEN}
+      - run: dotnet nuget push Podimo.ConstEmbed.${VERSION}.nupkg --source https://nuget.pkg.github.com/podimo/index.json --api-key ${GITHUB_TOKEN}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
