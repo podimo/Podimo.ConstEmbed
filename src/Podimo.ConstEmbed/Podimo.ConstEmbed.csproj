@@ -12,6 +12,7 @@
     <PropertyGroup>
         <PackageId>Podimo.ConstEmbed</PackageId>
         <PackageTags>Source Generators;Source Generator;Incremental;Embedding;Constants;Constant;Const</PackageTags>
+        <PackageLicenseExpression>MIT OR Apache-2.0</PackageLicenseExpression>
         <Version>1.0.0</Version>
         <Authors>Podimo</Authors>
         <Company>Podimo</Company>
