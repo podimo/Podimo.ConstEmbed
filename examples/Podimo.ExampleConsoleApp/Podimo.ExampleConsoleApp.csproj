@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <!-- When the generator is added via NuGet, these should be present via the props file. -->
+    <!-- In other words, you do not need to import the props file when referencing the NuGet package. -->
+    <Import Project="..\..\src\Podimo.ConstEmbed\build\Podimo.ConstEmbed.props"/>
+
+    <!-- Examples of using the global config options we support. -->
+    <PropertyGroup>
+        <!-- The namespace under which we generate the constants. -->
+        <ConstEmbedNamespace>Podimo.ExampleConsoleApp.Generated</ConstEmbedNamespace>
+        <!-- The visibility of the classes in which the constants are declared. -->
+        <ConstEmbedVisibility>public</ConstEmbedVisibility>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <!-- ReferenceOutputAssembly and OutputItemType do not need to be set when referencing the NuGet package. -->
+        <ProjectReference Include="..\..\src\Podimo.ConstEmbed\Podimo.ConstEmbed.csproj" ReferenceOutputAssembly="false" OutputItemType="Analyzer"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Empty"/>
+    </ItemGroup>
+
+    <!-- Glob patterns can be used to add more than one file at a time. The ConstEmbed option tells us what to name the class which contains the constant/s. -->
+    <ItemGroup>
+        <AdditionalFiles Include="Empty/*" ConstEmbed="Empty"/>
+        <AdditionalFiles Include="SQL/*.sql" ConstEmbed="SQL"/>
+        <AdditionalFiles Include="YAML/*.yaml" ConstEmbed="Yaml"/>
+    </ItemGroup>
+
+</Project>
