@@ -13,9 +13,11 @@
         <PackageId>Podimo.ConstEmbed</PackageId>
         <PackageTags>Source Generators;Source Generator;Incremental;Embedding;Constants;Constant;Const</PackageTags>
         <PackageLicenseExpression>MIT OR Apache-2.0</PackageLicenseExpression>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
         <Version>1.0.0</Version>
         <Authors>Podimo</Authors>
         <Company>Podimo</Company>
+        <Copyright>Copyright (c) Podimo 2022</Copyright>
         <RepositoryType>git</RepositoryType>
         <RepositoryUrl>https://github.com/podimo/Podimo.ConstEmbed</RepositoryUrl>
         <Title>Podimo.ConstEmbed - Compile-time file embedding as string constants.</Title>
@@ -29,6 +31,9 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <!-- README File -->
+        <None Include="../../README.md" Pack="true" PackagePath="/"/>
+
         <!-- Package the generator in the analyzer directory of the nuget package -->
         <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false"/>
 

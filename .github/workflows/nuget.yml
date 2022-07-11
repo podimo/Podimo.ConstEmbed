@@ -21,6 +21,10 @@ jobs:
       - run: dotnet build --configuration Release /p:Version=${VERSION}
       - run: dotnet test --configuration Release /p:Version=${VERSION} --no-build
       - run: dotnet pack --configuration Release /p:Version=${VERSION} --no-build --output .
-      - run: dotnet nuget push Podimo.ConstEmbed.${VERSION}.nupkg --source https://nuget.pkg.github.com/podimo/index.json --api-key ${GITHUB_TOKEN}
+      - run: dotnet nuget push Podimo.ConstEmbed.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_KEY}
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NUGET_KEY: ${{ secrets.NUGET_KEY }}
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: Podimo.ConstEmbed.${VERSION}.nupkg
+          generate_release_notes: true
