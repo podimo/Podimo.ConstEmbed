@@ -24,3 +24,7 @@ jobs:
       - run: dotnet nuget push Podimo.ConstEmbed.${VERSION}.nupkg --source https://api.nuget.org/v3/index.json --api-key ${NUGET_KEY}
         env:
           NUGET_KEY: ${{ secrets.NUGET_KEY }}
+      - uses: softprops/action-gh-release@v1
+        with:
+          files: Podimo.ConstEmbed.${VERSION}.nupkg
+          generate_release_notes: true
