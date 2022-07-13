@@ -26,6 +26,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Podimo.ExampleCodeGeneratio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Podimo.ConstEmbedTestHelpers", "tests\Podimo.ConstEmbedTestHelpers\Podimo.ConstEmbedTestHelpers.csproj", "{A842477D-29BF-412F-BCA2-660EA7E54E82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Podimo.ConstEmbedBenchmarks", "bench\Podimo.ConstEmbedBenchmarks\Podimo.ConstEmbedBenchmarks.csproj", "{A74B548D-4591-4E45-8FFC-4BDD1FB944BA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bench", "bench", "{8D8DF8AA-AEAE-4DBA-8F37-721D9A25AB9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +56,10 @@ Global
 		{A842477D-29BF-412F-BCA2-660EA7E54E82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A842477D-29BF-412F-BCA2-660EA7E54E82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A842477D-29BF-412F-BCA2-660EA7E54E82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A74B548D-4591-4E45-8FFC-4BDD1FB944BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A74B548D-4591-4E45-8FFC-4BDD1FB944BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A74B548D-4591-4E45-8FFC-4BDD1FB944BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A74B548D-4591-4E45-8FFC-4BDD1FB944BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,5 +73,6 @@ Global
 		{53E30252-5907-4AA5-8C0F-D98D5DBC07BA} = {F529D587-9BB8-4974-ABC1-0AD347F2CFAD}
 		{490EAEC0-CBD0-4BED-BCBB-D6B566FA7970} = {F529D587-9BB8-4974-ABC1-0AD347F2CFAD}
 		{A842477D-29BF-412F-BCA2-660EA7E54E82} = {E161277B-6B8D-4B2A-A83D-46CEBDE4EAC8}
+		{A74B548D-4591-4E45-8FFC-4BDD1FB944BA} = {8D8DF8AA-AEAE-4DBA-8F37-721D9A25AB9B}
 	EndGlobalSection
 EndGlobal

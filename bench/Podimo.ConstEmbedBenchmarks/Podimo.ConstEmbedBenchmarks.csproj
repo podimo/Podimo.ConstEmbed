@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="BenchmarkDotNet" Version="0.13.1" />
+    </ItemGroup>
+
+    <Import Project="..\..\src\Podimo.ConstEmbed\build\Podimo.ConstEmbed.props" />
+    <PropertyGroup>
+        <ConstEmbedNamespace>Podimo.ConstEmbedBenchmarks.Generated</ConstEmbedNamespace>
+    </PropertyGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Podimo.ConstEmbed\Podimo.ConstEmbed.csproj" OutputItemType="Analyzer" />
+        <AdditionalFiles Include="TestFiles\*" ConstEmbed="Files" />
+    </ItemGroup>
+
+</Project>

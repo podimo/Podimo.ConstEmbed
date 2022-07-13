@@ -12,6 +12,9 @@ print-code:
 test:
     dotnet test --nologo --verbosity=quiet
 
+bench:
+    dotnet run --nologo --verbosity=quiet --configuration Release --project bench/Podimo.ConstEmbedBenchmarks
+
 # List the contents of the generated nupkg. N.B.: Requires bash.
 inspect:
     #!/usr/bin/env bash
