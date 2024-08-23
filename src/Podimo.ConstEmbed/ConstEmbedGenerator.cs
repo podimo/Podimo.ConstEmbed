@@ -23,7 +23,7 @@ public class ConstEmbedGenerator : IIncrementalGenerator
                     var @class = pair.Right.GetAdditionalFileMetadata(pair.Left, "ConstEmbed");
                     return (Class: @class, File: pair.Left);
                 })
-                .Where(static pair => pair.Class is not null);
+                .Where(static pair => !string.IsNullOrEmpty(pair.Class));
 
         var combined = additionalFiles.Combine(globalOptions);
 
